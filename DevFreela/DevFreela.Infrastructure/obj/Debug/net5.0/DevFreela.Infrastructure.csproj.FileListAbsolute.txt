@@ -1,6 +1,5 @@
 X:\genildom\curso_dotnet\DevFreela\DevFreela.Infrastructure\bin\Debug\net5.0\DevFreela.Infrastructure.deps.json
 X:\genildom\curso_dotnet\DevFreela\DevFreela.Infrastructure\bin\Debug\net5.0\DevFreela.Infrastructure.dll
-X:\genildom\curso_dotnet\DevFreela\DevFreela.Infrastructure\bin\Debug\net5.0\ref\DevFreela.Infrastructure.dll
 X:\genildom\curso_dotnet\DevFreela\DevFreela.Infrastructure\bin\Debug\net5.0\DevFreela.Infrastructure.pdb
 X:\genildom\curso_dotnet\DevFreela\DevFreela.Infrastructure\bin\Debug\net5.0\DevFreela.Core.dll
 X:\genildom\curso_dotnet\DevFreela\DevFreela.Infrastructure\bin\Debug\net5.0\DevFreela.Core.pdb
@@ -13,3 +12,7 @@ X:\genildom\curso_dotnet\DevFreela\DevFreela.Infrastructure\obj\Debug\net5.0\Dev
 X:\genildom\curso_dotnet\DevFreela\DevFreela.Infrastructure\obj\Debug\net5.0\DevFreela.Infrastructure.dll
 X:\genildom\curso_dotnet\DevFreela\DevFreela.Infrastructure\obj\Debug\net5.0\ref\DevFreela.Infrastructure.dll
 X:\genildom\curso_dotnet\DevFreela\DevFreela.Infrastructure\obj\Debug\net5.0\DevFreela.Infrastructure.pdb
+X:\genildom\curso_dotnet\DevFreela\DevFreela.Infrastructure\bin\Debug\net5.0\DevFreela.Infrastructure.runtimeconfig.json
+X:\genildom\curso_dotnet\DevFreela\DevFreela.Infrastructure\bin\Debug\net5.0\DevFreela.Infrastructure.runtimeconfig.dev.json
+X:\genildom\curso_dotnet\DevFreela\DevFreela.Infrastructure\obj\Debug\net5.0\DevFreela.Infrastructure.genruntimeconfig.cache
+X:\genildom\curso_dotnet\DevFreela\DevFreela.Infrastructure\bin\Debug\net5.0\ref\DevFreela.Infrastructure.dll

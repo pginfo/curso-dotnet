@@ -27,34 +27,27 @@ namespace DevFreela.Application.Services.Implementations
 
             _dbContext.Users.Add(user);
 
-            return user.Id;
-        }
+            _dbContext.SaveChanges();
 
-        public void Delete(int id)
-        {
-            throw new NotImplementedException();
+            return user.Id;
         }
 
         public List<UserViewModel> GetAll(string query)
         {
             var users = _dbContext.Users;
+
             var usersViewModel = users.Select(p => new UserViewModel(p.Id, p.FullName, p.Email)).ToList();
+
             return usersViewModel;
         }
 
-        public UserDetailsViewModel GetById(int id)
+        public UserViewModel GetUser(int id)
         {
             var user = _dbContext.Users.SingleOrDefault(u => u.Id == id);
 
-            var userDetailsViewModel = new UserDetailsViewModel(
-                user.Id,
-                user.FullName,
-                user.Email,
-                user.Active,
-                user.CreatedAt
-                );
+            if (user == null) { return null; }
 
-            return userDetailsViewModel;
+           return new UserViewModel(user.Id, user.FullName, user.Email);
         }
 
         public void Update(UpdateUserInputModel inputModel)
@@ -62,6 +55,8 @@ namespace DevFreela.Application.Services.Implementations
             var user = _dbContext.Users.SingleOrDefault(u => u.Id == inputModel.Id);
 
             user.Update(inputModel.FullName, inputModel.Email, inputModel.BirthDate, inputModel.Active);
+
+            _dbContext.SaveChanges();
         }
     }
 }

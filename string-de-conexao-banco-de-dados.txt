@@ -3,3 +3,8 @@ Server=localhost\SQLEXPRESS;Database=master;Trusted_Connection=True;
 Pasta de log:
 C:\Program Files\Microsoft SQL Server\160\Setup Bootstrap\Log\20231101_102217
 
+# Criar as migrations 
+$ dotnet ef migrations add InitialMigration -s ../DevFreela.API/DevFreela.API.csproj -o ./Persistence/Migrations
+
+# Persistir os dados no banco
+$ dotnet ef database update -s ../DevFreela.API/DevFreela.API.csproj
