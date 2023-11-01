@@ -1,0 +1,16 @@
+X:\genildom\curso_dotnet\CSharpDiretoAoPontoHelloWorld\bin\Debug\net5.0\CSharpDiretoAoPontoHelloWorld.exe
+X:\genildom\curso_dotnet\CSharpDiretoAoPontoHelloWorld\bin\Debug\net5.0\CSharpDiretoAoPontoHelloWorld.deps.json
+X:\genildom\curso_dotnet\CSharpDiretoAoPontoHelloWorld\bin\Debug\net5.0\CSharpDiretoAoPontoHelloWorld.runtimeconfig.json
+X:\genildom\curso_dotnet\CSharpDiretoAoPontoHelloWorld\bin\Debug\net5.0\CSharpDiretoAoPontoHelloWorld.runtimeconfig.dev.json
+X:\genildom\curso_dotnet\CSharpDiretoAoPontoHelloWorld\bin\Debug\net5.0\CSharpDiretoAoPontoHelloWorld.dll
+X:\genildom\curso_dotnet\CSharpDiretoAoPontoHelloWorld\bin\Debug\net5.0\ref\CSharpDiretoAoPontoHelloWorld.dll
+X:\genildom\curso_dotnet\CSharpDiretoAoPontoHelloWorld\bin\Debug\net5.0\CSharpDiretoAoPontoHelloWorld.pdb
+X:\genildom\curso_dotnet\CSharpDiretoAoPontoHelloWorld\obj\Debug\net5.0\CSharpDiretoAoPontoHelloWorld.csproj.AssemblyReference.cache
+X:\genildom\curso_dotnet\CSharpDiretoAoPontoHelloWorld\obj\Debug\net5.0\CSharpDiretoAoPontoHelloWorld.GeneratedMSBuildEditorConfig.editorconfig
+X:\genildom\curso_dotnet\CSharpDiretoAoPontoHelloWorld\obj\Debug\net5.0\CSharpDiretoAoPontoHelloWorld.AssemblyInfoInputs.cache
+X:\genildom\curso_dotnet\CSharpDiretoAoPontoHelloWorld\obj\Debug\net5.0\CSharpDiretoAoPontoHelloWorld.AssemblyInfo.cs
+X:\genildom\curso_dotnet\CSharpDiretoAoPontoHelloWorld\obj\Debug\net5.0\CSharpDiretoAoPontoHelloWorld.csproj.CoreCompileInputs.cache
+X:\genildom\curso_dotnet\CSharpDiretoAoPontoHelloWorld\obj\Debug\net5.0\CSharpDiretoAoPontoHelloWorld.dll
+X:\genildom\curso_dotnet\CSharpDiretoAoPontoHelloWorld\obj\Debug\net5.0\ref\CSharpDiretoAoPontoHelloWorld.dll
+X:\genildom\curso_dotnet\CSharpDiretoAoPontoHelloWorld\obj\Debug\net5.0\CSharpDiretoAoPontoHelloWorld.pdb
+X:\genildom\curso_dotnet\CSharpDiretoAoPontoHelloWorld\obj\Debug\net5.0\CSharpDiretoAoPontoHelloWorld.genruntimeconfig.cache

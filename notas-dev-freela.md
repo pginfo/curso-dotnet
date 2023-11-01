@@ -1,0 +1,3 @@
+# DevFreela
+
+- Configuração da aplicação

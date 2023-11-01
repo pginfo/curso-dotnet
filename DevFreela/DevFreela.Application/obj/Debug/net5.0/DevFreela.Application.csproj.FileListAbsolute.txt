@@ -1,0 +1,17 @@
+X:\genildom\curso_dotnet\DevFreela\DevFreela.Application\bin\Debug\net5.0\DevFreela.Application.deps.json
+X:\genildom\curso_dotnet\DevFreela\DevFreela.Application\bin\Debug\net5.0\DevFreela.Application.dll
+X:\genildom\curso_dotnet\DevFreela\DevFreela.Application\bin\Debug\net5.0\ref\DevFreela.Application.dll
+X:\genildom\curso_dotnet\DevFreela\DevFreela.Application\bin\Debug\net5.0\DevFreela.Application.pdb
+X:\genildom\curso_dotnet\DevFreela\DevFreela.Application\bin\Debug\net5.0\DevFreela.Core.dll
+X:\genildom\curso_dotnet\DevFreela\DevFreela.Application\bin\Debug\net5.0\DevFreela.Infrastructure.dll
+X:\genildom\curso_dotnet\DevFreela\DevFreela.Application\bin\Debug\net5.0\DevFreela.Infrastructure.pdb
+X:\genildom\curso_dotnet\DevFreela\DevFreela.Application\bin\Debug\net5.0\DevFreela.Core.pdb
+X:\genildom\curso_dotnet\DevFreela\DevFreela.Application\obj\Debug\net5.0\DevFreela.Application.csproj.AssemblyReference.cache
+X:\genildom\curso_dotnet\DevFreela\DevFreela.Application\obj\Debug\net5.0\DevFreela.Application.GeneratedMSBuildEditorConfig.editorconfig
+X:\genildom\curso_dotnet\DevFreela\DevFreela.Application\obj\Debug\net5.0\DevFreela.Application.AssemblyInfoInputs.cache
+X:\genildom\curso_dotnet\DevFreela\DevFreela.Application\obj\Debug\net5.0\DevFreela.Application.AssemblyInfo.cs
+X:\genildom\curso_dotnet\DevFreela\DevFreela.Application\obj\Debug\net5.0\DevFreela.Application.csproj.CoreCompileInputs.cache
+X:\genildom\curso_dotnet\DevFreela\DevFreela.Application\obj\Debug\net5.0\DevFreela.Application.csproj.CopyComplete
+X:\genildom\curso_dotnet\DevFreela\DevFreela.Application\obj\Debug\net5.0\DevFreela.Application.dll
+X:\genildom\curso_dotnet\DevFreela\DevFreela.Application\obj\Debug\net5.0\ref\DevFreela.Application.dll
+X:\genildom\curso_dotnet\DevFreela\DevFreela.Application\obj\Debug\net5.0\DevFreela.Application.pdb
