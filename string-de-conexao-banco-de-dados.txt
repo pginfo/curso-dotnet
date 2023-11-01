@@ -1,0 +1,5 @@
+Server=localhost\SQLEXPRESS;Database=master;Trusted_Connection=True;
+
+Pasta de log:
+C:\Program Files\Microsoft SQL Server\160\Setup Bootstrap\Log\20231101_102217
+
