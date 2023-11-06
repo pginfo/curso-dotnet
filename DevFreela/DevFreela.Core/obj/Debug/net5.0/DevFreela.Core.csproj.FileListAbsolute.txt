@@ -1,7 +1,6 @@
 X:\genildom\curso_dotnet\DevFreela\DevFreela.Core\bin\Debug\net5.0\DevFreela.Core.deps.json
 X:\genildom\curso_dotnet\DevFreela\DevFreela.Core\bin\Debug\net5.0\DevFreela.Core.dll
 X:\genildom\curso_dotnet\DevFreela\DevFreela.Core\bin\Debug\net5.0\DevFreela.Core.pdb
-X:\genildom\curso_dotnet\DevFreela\DevFreela.Core\obj\Debug\net5.0\DevFreela.Core.csproj.AssemblyReference.cache
 X:\genildom\curso_dotnet\DevFreela\DevFreela.Core\obj\Debug\net5.0\DevFreela.Core.GeneratedMSBuildEditorConfig.editorconfig
 X:\genildom\curso_dotnet\DevFreela\DevFreela.Core\obj\Debug\net5.0\DevFreela.Core.AssemblyInfoInputs.cache
 X:\genildom\curso_dotnet\DevFreela\DevFreela.Core\obj\Debug\net5.0\DevFreela.Core.AssemblyInfo.cs
