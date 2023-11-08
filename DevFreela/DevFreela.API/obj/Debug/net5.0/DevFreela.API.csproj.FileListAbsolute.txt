@@ -64,6 +64,5 @@ X:\genildom\curso_dotnet\DevFreela\DevFreela.API\bin\Debug\net5.0\runtimes\win\l
 X:\genildom\curso_dotnet\DevFreela\DevFreela.API\bin\Debug\net5.0\ref\DevFreela.API.dll
 X:\genildom\curso_dotnet\DevFreela\DevFreela.API\obj\Debug\net5.0\staticwebassets\DevFreela.API.StaticWebAssets.xml
 X:\genildom\curso_dotnet\DevFreela\DevFreela.API\bin\Debug\net5.0\MediatR.dll
-X:\genildom\curso_dotnet\DevFreela\DevFreela.API\bin\Debug\net5.0\MediatR.Contracts.dll
 X:\genildom\curso_dotnet\DevFreela\DevFreela.API\bin\Debug\net5.0\MediatR.Extensions.Microsoft.DependencyInjection.dll
-X:\genildom\curso_dotnet\DevFreela\DevFreela.API\bin\Debug\net5.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+X:\genildom\curso_dotnet\DevFreela\DevFreela.API\bin\Debug\net5.0\Dapper.dll

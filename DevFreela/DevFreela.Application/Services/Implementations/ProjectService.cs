@@ -16,7 +16,6 @@ namespace DevFreela.Application.Services.Implementations
             _dbContext = dbContext;
         }
 
-
         public void Finish(int id)
 
         {
@@ -25,15 +24,6 @@ namespace DevFreela.Application.Services.Implementations
             project.Finish();
 
             _dbContext.SaveChanges();
-        }
-
-        public List<ProjectViewModel> GetAll(string query)
-        {
-            var projects = _dbContext.Projects;
-
-            var projectsViewModel = projects.Select(p => new ProjectViewModel(p.Id, p.Title, p.CreatedAt)).ToList();
-
-            return projectsViewModel;
         }
 
         public ProjectDetailsViewModel GetById(int id)
@@ -48,7 +38,9 @@ namespace DevFreela.Application.Services.Implementations
                 project.Description,
                 project.TotalCost,
                 project.StartedAt,
-                project.FinishedAt);
+                project.FinishedAt,
+                project.Client.FullName,
+                project.Freelancer.FullName);
 
             return projectDetailsViewModel;
         }
