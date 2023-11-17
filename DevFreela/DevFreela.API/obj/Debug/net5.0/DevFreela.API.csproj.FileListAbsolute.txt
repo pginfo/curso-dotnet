@@ -69,3 +69,4 @@ X:\genildom\curso_dotnet\DevFreela\DevFreela.API\bin\Debug\net5.0\FluentValidati
 X:\genildom\curso_dotnet\DevFreela\DevFreela.API\bin\Debug\net5.0\ref\DevFreela.API.dll
 X:\genildom\curso_dotnet\DevFreela\DevFreela.API\obj\Debug\net5.0\staticwebassets\DevFreela.API.StaticWebAssets.xml
 X:\genildom\curso_dotnet\DevFreela\DevFreela.API\bin\Debug\net5.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+X:\genildom\curso_dotnet\DevFreela\DevFreela.API\bin\Debug\net5.0\RabbitMQ.Client.dll

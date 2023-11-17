@@ -140,3 +140,4 @@ X:\genildom\curso_dotnet\DevFreela\DevFreela.UnitTests\obj\Debug\net5.0\DevFreel
 X:\genildom\curso_dotnet\DevFreela\DevFreela.UnitTests\obj\Debug\net5.0\DevFreela.UnitTests.genruntimeconfig.cache
 X:\genildom\curso_dotnet\DevFreela\DevFreela.UnitTests\bin\Debug\net5.0\Castle.Core.dll
 X:\genildom\curso_dotnet\DevFreela\DevFreela.UnitTests\bin\Debug\net5.0\Moq.dll
+X:\genildom\curso_dotnet\DevFreela\DevFreela.UnitTests\bin\Debug\net5.0\RabbitMQ.Client.dll

@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "dgSpecHash": "VSPLp2Jpa8sVQzzBp0lCRpjgiIpMwndcXTSVbTrf3zekEPXTezudL8YTSJjR/MnG8R/sNmaHaD7EYHRZUYtZoA==",
+  "success": true,
+  "projectFilePath": "X:\\genildom\\curso_dotnet\\DevFreela.Payments\\DevFreela.Payments.API\\DevFreela.Payments.API.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\genildom\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
+    "C:\\Users\\genildom\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\genildom\\.nuget\\packages\\rabbitmq.client\\5.2.0\\rabbitmq.client.5.2.0.nupkg.sha512",
+    "C:\\Users\\genildom\\.nuget\\packages\\swashbuckle.aspnetcore\\6.5.0\\swashbuckle.aspnetcore.6.5.0.nupkg.sha512",
+    "C:\\Users\\genildom\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.5.0\\swashbuckle.aspnetcore.swagger.6.5.0.nupkg.sha512",
+    "C:\\Users\\genildom\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.5.0\\swashbuckle.aspnetcore.swaggergen.6.5.0.nupkg.sha512",
+    "C:\\Users\\genildom\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.5.0\\swashbuckle.aspnetcore.swaggerui.6.5.0.nupkg.sha512"
+  ],
+  "logs": []
+}
