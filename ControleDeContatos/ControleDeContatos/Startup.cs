@@ -1,15 +1,14 @@
 using ControleDeContatos.Data;
+using ControleDeContatos.Helper;
 using ControleDeContatos.Repositorio;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+
 
 namespace ControleDeContatos
 {
@@ -28,7 +27,17 @@ namespace ControleDeContatos
             _ = services.AddControllersWithViews();
             _ = services.AddEntityFrameworkSqlServer().AddDbContext<BancoContext>(o => o.UseSqlServer(Configuration.GetConnectionString("DatabaseContatos")));
 
+            _ = services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+
             _ = services.AddScoped<IContatoRepositorio, ContatoRepositorio>();
+            _ = services.AddScoped<IUsuarioRepositorio, UsuarioRepositorio>();
+            _ = services.AddScoped<ISessao, Sessao>();
+
+            services.AddSession(o =>
+            {
+                o.Cookie.HttpOnly = true;
+                o.Cookie.IsEssential = true;
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -36,24 +45,26 @@ namespace ControleDeContatos
         {
             if (env.IsDevelopment())
             {
-                app.UseDeveloperExceptionPage();
+                _ = app.UseDeveloperExceptionPage();
             }
             else
             {
-                app.UseExceptionHandler("/Home/Error");
+                _ = app.UseExceptionHandler("/Home/Error");
             }
-            app.UseStaticFiles();
+            _ = app.UseStaticFiles();
 
-            app.UseRouting();
+            _ = app.UseRouting();
 
-            app.UseAuthorization();
+            _ = app.UseAuthorization();
 
-            app.UseEndpoints(endpoints =>
-            {
-                endpoints.MapControllerRoute(
-                    name: "default",
-                    pattern: "{controller=Home}/{action=Index}/{id?}");
-            });
+            _ = app.UseSession();
+
+            _ = app.UseEndpoints(endpoints =>
+              {
+                  _ = endpoints.MapControllerRoute(
+                      name: "default",
+                      pattern: "{controller=Login}/{action=Index}/{id?}");
+              });
         }
     }
 }

@@ -1,0 +1,29 @@
+﻿@model LoginModel
+@{
+    Layout = "_LayoutDeslogado";
+    ViewData["Title"] = "Login";
+}
+
+@if (TempData["MensagemErro"] != null)
+{
+    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+        <strong>Status: </strong> @TempData["MensagemErro"]
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+}
+
+<form asp-controler="Login" asp-action="Entrar" method="post" autocomplete="off">
+    <div class="mb-3">
+        <label for="login" class="form-label">Login</label>
+        <input type="text" class="form-control" id="login" asp-for="Login">
+        @Html.ValidationMessageFor(l => l.Login)
+    </div>
+    <div class="mb-3">
+        <label for="senha" class="form-label">Senha</label>
+        <input type="password" class="form-control" id="senha" asp-for="Senha">
+        @Html.ValidationMessageFor(l => l.Senha)
+    </div>
+    <button type="submit" class="btn btn-primary btn-block">Entrar</button>
+</form>

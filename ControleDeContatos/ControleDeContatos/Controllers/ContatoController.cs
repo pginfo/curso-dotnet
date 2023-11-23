@@ -1,4 +1,5 @@
-﻿using ControleDeContatos.Models;
+﻿using ControleDeContatos.Filters;
+using ControleDeContatos.Models;
 using ControleDeContatos.Repositorio;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -6,6 +7,7 @@ using System.Collections.Generic;
 
 namespace ControleDeContatos.Controllers
 {
+    [PaginaParaUsuarioLogado]
     public class ContatoController : Controller
     {
         private readonly IContatoRepositorio _contatoRepositorio;
@@ -44,15 +46,7 @@ namespace ControleDeContatos.Controllers
             { 
                 bool apagado = _contatoRepositorio.Apagar(id);
 
-                if (apagado)
-                {
-                    TempData["MensagemSucesso"] = "Contato apagado com sucesso";
-                }
-                else
-                {
-                    TempData["MensagemErro"] = "Ops, não conseguimos apagar o contato";
-                }
-
+                if (apagado) TempData["MensagemSucesso"] = "Contato apagado com sucesso"; else TempData["MensagemErro"] = "Ops, não conseguimos apagar o contato";
                 return RedirectToAction("Index");
             }
             catch (Exception erro)
@@ -69,7 +63,7 @@ namespace ControleDeContatos.Controllers
             {
                 if (ModelState.IsValid)
                 {
-                    _contatoRepositorio.Adicionar(contato);
+                    _ = _contatoRepositorio.Adicionar(contato);
                     TempData["MensagemSucesso"] = "Contato cadastrado com sucesso";
                     return RedirectToAction("Index");
                 }
@@ -90,7 +84,7 @@ namespace ControleDeContatos.Controllers
             {
                 if (ModelState.IsValid)
                 {
-                    _contatoRepositorio.Atualizar(contato);
+                    _ = _contatoRepositorio.Atualizar(contato);
                     TempData["MensagemSucesso"] = "Contato alterado com sucesso";
                     return RedirectToAction("Index");
                 }
