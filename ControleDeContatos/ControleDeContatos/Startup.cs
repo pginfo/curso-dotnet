@@ -25,13 +25,17 @@ namespace ControleDeContatos
         public void ConfigureServices(IServiceCollection services)
         {
             _ = services.AddControllersWithViews();
-            _ = services.AddEntityFrameworkSqlServer().AddDbContext<BancoContext>(o => o.UseSqlServer(Configuration.GetConnectionString("DatabaseContatos")));
+            _ = services
+                //.AddEntityFrameworkSqlServer()
+                .AddDbContext<BancoContext>(o => o.UseSqlServer(Configuration.GetConnectionString("DatabaseContatos")));
 
             _ = services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
 
             _ = services.AddScoped<IContatoRepositorio, ContatoRepositorio>();
             _ = services.AddScoped<IUsuarioRepositorio, UsuarioRepositorio>();
             _ = services.AddScoped<ISessao, Sessao>();
+
+            _ = services.AddScoped<IEmail, Email>();
 
             services.AddSession(o =>
             {

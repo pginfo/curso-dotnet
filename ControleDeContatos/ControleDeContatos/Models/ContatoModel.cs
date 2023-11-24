@@ -14,7 +14,11 @@ namespace ControleDeContatos.Models
         public string Email { get; set; }
 
         [Required(ErrorMessage = "Digite o número do celular")]
-        [Phone(ErrorMessage = "Número do celular não é válido")]
+        [Phone(ErrorMessage = "O celular informado não é válido")]
         public string Celular { get; set; }
+
+        public int? UsuarioId { get; set; }
+
+        public UsuarioModel Usuario { get; set; }
     }
 }

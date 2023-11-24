@@ -1,6 +1,7 @@
 ﻿using ControleDeContatos.Data;
 using ControleDeContatos.DTOs;
 using ControleDeContatos.Models;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,6 +22,13 @@ namespace ControleDeContatos.Repositorio
             return _bancoContext.Usuarios.FirstOrDefault(u => u.Login.ToUpper() == login.ToUpper());
         }
 
+        public UsuarioModel BuscarPorEmailElogin(string email, string login)
+        {
+            return _bancoContext.Usuarios.FirstOrDefault(
+                u => u.Email.ToUpper() == email.ToUpper() && u.Login.ToUpper() == login.ToUpper()
+                );
+        }
+
         public UsuarioModel ListarPorId(int id)
         {
             return _bancoContext.Usuarios.FirstOrDefault(c => c.Id == id);
@@ -29,7 +37,8 @@ namespace ControleDeContatos.Repositorio
         public List<UsuarioModel> BuscarTodos()
         {
             return _bancoContext.Usuarios
-                .OrderBy(u => u.Nome)
+                .Include(x => x.Contatos)
+                .OrderBy(x => x.Nome)
                 .ToList();
         }
 
@@ -43,7 +52,7 @@ namespace ControleDeContatos.Repositorio
             return usuario;
         }
 
-        public UsuarioModel Atualizar(UsuarioDTO usuarioModel)
+        public UsuarioModel Atualizar(UsuarioModel usuarioModel)
         {
             UsuarioModel usuario = ListarPorId(usuarioModel.Id);
 
@@ -61,6 +70,25 @@ namespace ControleDeContatos.Repositorio
             return usuario;
         }
 
+        public UsuarioModel AlterarSenha(AlterarSenhaModel alterarSenhaModel)
+        {
+            UsuarioModel usuarioDB = ListarPorId(alterarSenhaModel.Id);
+
+            if (usuarioDB == null) throw new Exception("Houve um erro na atualização da senha, usuário não encontrado.");
+
+            if (!usuarioDB.SenhaValida(alterarSenhaModel.SenhaAtual)) throw new Exception("Senha atual não confere!");
+
+            if (usuarioDB.SenhaValida(alterarSenhaModel.NovaSenha)) throw new Exception("Nova senha deve ser diferente da senha atual.");
+
+            usuarioDB.SetNovaSenha(alterarSenhaModel.NovaSenha);
+            usuarioDB.DataAtualizacao = DateTime.Now;
+
+            _bancoContext.Usuarios.Update(usuarioDB);
+            _bancoContext.SaveChanges();
+
+            return usuarioDB;
+        }
+
         public bool Apagar(int id)
         {
             UsuarioModel usuarioDB = ListarPorId(id);
@@ -73,6 +101,5 @@ namespace ControleDeContatos.Repositorio
             return true;
         }
 
-        
     }
 }

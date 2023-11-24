@@ -36,9 +36,15 @@ namespace ControleDeContatos.Migrations
 
                     b.Property<string>("Nome")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<int?>("UsuarioId")
+                        .HasColumnType("int");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("UsuarioId");
 
                     b.ToTable("Contatos");
                 });
@@ -62,23 +68,36 @@ namespace ControleDeContatos.Migrations
 
                     b.Property<string>("Login")
                         .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Nome")
                         .IsRequired()
-                        .HasMaxLength(255)
-                        .HasColumnType("nvarchar(255)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("Perfil")
                         .HasColumnType("int");
 
                     b.Property<string>("Senha")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
                     b.ToTable("Usuarios");
+                });
+
+            modelBuilder.Entity("ControleDeContatos.Models.ContatoModel", b =>
+                {
+                    b.HasOne("ControleDeContatos.Models.UsuarioModel", "Usuario")
+                        .WithMany("Contatos")
+                        .HasForeignKey("UsuarioId");
+
+                    b.Navigation("Usuario");
+                });
+
+            modelBuilder.Entity("ControleDeContatos.Models.UsuarioModel", b =>
+                {
+                    b.Navigation("Contatos");
                 });
 #pragma warning restore 612, 618
         }

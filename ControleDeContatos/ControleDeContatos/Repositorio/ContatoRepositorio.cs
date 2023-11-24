@@ -20,9 +20,9 @@ namespace ControleDeContatos.Repositorio
             return _bancoContext.Contatos.FirstOrDefault(c => c.Id == id);
         }
 
-        public List<ContatoModel> BuscarTodos()
+        public List<ContatoModel> BuscarTodos(int usuarioId)
         {
-            return _bancoContext.Contatos
+            return _bancoContext.Contatos.Where(x => x.UsuarioId == usuarioId)
                 .OrderBy(c => c.Nome)
                 .ToList();
         }
