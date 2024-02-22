@@ -3,13 +3,13 @@ using LabUploadFiles.Repository.Abstract;
 using LabUploadFiles.Repository.Implementation;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.FileProviders;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
+using System.IO;
 
 namespace LabUploadFiles
 {
@@ -33,6 +33,7 @@ namespace LabUploadFiles
             });
 
             services.AddScoped<IFileService, FileService>();
+            services.AddScoped<IProductRepository, ProductRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -46,6 +47,16 @@ namespace LabUploadFiles
             }
 
             app.UseHttpsRedirection();
+
+
+            // Mapeia o caminho "/Resources" para visualizar as imagens via browser
+            // Exemplo: https://localhost:44366/resources/61ae23fc-1dd5-4ec1-a22d-b265f0a62b8b.png
+            app.UseStaticFiles(new StaticFileOptions 
+            { 
+                FileProvider = new PhysicalFileProvider(
+                    Path.Combine(Directory.GetCurrentDirectory(),"Uploads")),
+                RequestPath = "/Resources"                    
+            });
 
             app.UseRouting();
 
